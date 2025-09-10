@@ -1,349 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-  <meta name="color-scheme" content="dark light">
-  <meta name="theme-color" content="#333333">
-  <title>webretro</title>
-  <meta name="description" content="RetroArch in your browser! Libretro cores compiled to WASM using emscripten, plus a custom UI.">
-  <meta name="robots" content="nofollow">
-  <meta name="og:title" content="webretro">
-  <meta name="og:type" content="website">
-  <meta name="og:image" content="assets/icons/icon204.png">
-  <meta name="og:url" content="https://binbashbanana.github.io/webretro/">
-  <link rel="stylesheet" href="assets/base.css?v=6.5">
-  <link rel="stylesheet" href="assets/jswindow.css">
-  <link rel="shortcut icon" href="assets/icons/icon204.png">
-  <link rel="apple-touch-icon" href="assets/icons/iconm256.png">
-  <link rel="manifest" href="manifest.json">
-  <link rel="canonical" href="https://binbashbanana.github.io/webretro/">
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/">
-  <style>#canvas { top: 65px; height: calc(100vh - 65px); }</style>
-</head>
-<body data-theme="webplayer navy" class="coreselect">
-  <div class="main" id="mainarea">
-    <div id="menubar" style="height: 65px;">
-      <input type="checkbox" id="menuhider">
-      <label for="menuhider" class="menuhiderlabel"></label>
-      <ul id="menu">
-        <li class="menuback"><a href="." title="Back to core selection"></a></li>
-        <li>Controls
-          <ul>
-            <li><a id="keybindsbutton" href="">Keybinds</a></li>
-            <li class="menu-long menu-nohover">Please note that these are just the bindings that are set, but in-game controls may vary.</li>
-            <li>
-              <a href="" title="Opens in new tab"
-                 onclick="window.open(window.URL.createObjectURL(new Blob([decodeURIComponent(atob('JTNDIURPQ1RZUEUlMjBodG1sJTNFJTNDaHRtbCUzRSUzQ2hlYWQlM0UlM0NtZXRhJTIwaHR0cC1lcXVpdiUzRCUyMnJlZnJlc2glMjIlMjBjb250ZW50JTNEJTIyMSUzQlVSTCUzRGh0dHBzJTNBJTJGJTJGcmV0cm9waWUub3JnLnVrJTJGZG9jcyUyRlJldHJvQXJjaC1Db25maWd1cmF0aW9uJTJGJTIzZGVmYXVsdC1jb3JlLWNvbnRyb2xzLWZvci1hbGwtZW11bGF0b3JzJTIyJTNFJTNDdGl0bGUlM0VSZWRpcmVjdGluZyUzQyUyRnRpdGxlJTNFJTNDJTJGaGVhZCUzRSUzQ2JvZHklM0UlM0NoMiUzRVJlZGlyZWN0aW5nLi4uJTNDJTJGaDIlM0UlM0MlMkZib2R5JTNFJTNDJTJGaHRtbCUzRQ=='))], {type: 'text/html'})));return false;">
-                System Specifics
-              </a>
-            </li>
-          </ul>
-        </li>
+<html lang="en"><head><script nonce="tWzMeZwbdz1yacGUG5NxuA" src="https://localhost:49406/resources/setup.js"></script><script nonce="y1YbwdEC9XmQ+ZKzsSnSGg" src="https://localhost:49406/resources/frontend.min.js" server="https://localhost:49406" id="__dld-frontend__" async="" defer=""></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps - Flamepass</title>
+    
+    <!-- Meta tags -->
+    <meta name="description" content="Flamepass: The #1 School Hub with games, website proxies, tools, AI chat &amp; more. Your all-in-one student resource hub.">
+    <meta name="keywords" content="Proxy, Unblocker, Flamepass Unblocker, Flamepass">
+    <meta property="og:image" content="/assets/logo.webp">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="icon/x-icon" href="/assets/favicon.ico">
+    
+    <!-- Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SPVQHBL4J1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-SPVQHBL4J1');
+    </script>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/apps.css">
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <!-- Scripts -->
+    <script src="/js/auth-controller.min.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/apps.js" defer=""></script>
+    <!-- Add Background Grid Script -->
+    <script src="/js/background.js"></script>
+    <script src="/js/background-init.js"></script>
+    <!-- Add Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/thin/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/light/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/duotone/style.css">
+<link rel="preconnect" href="https://unpkg.com"></head>
 
-        <li>Saves
-          <ul>
-            <li class="pointer disabled" id="savegame">Save Game</li>
-            <li class="pointer disabled" id="resetbutton">Reset</li>
-            <li class="pointer disabled" id="exportsave">Export SRAM</li>
-            <li class="pointer disabled" id="importsave">Import SRAM</li>
-            <li class="disabled">
-              <label><input type="checkbox" id="autosave" checked disabled>Autosave (5m)</label>
-            </li>
-            <li><a id="savesbutton" href="">Recover Saves</a></li>
-            <li class="menu-long menu-nohover" style="width:200px">Please note that in order for the game to be saved, you must use the save feature in-game (unless of course the game itself autosaves), then press the save button here (Or autosave must happen). <b>These saves are only for in-game save files. If you want to be able to save at any time, use save states.</b> Saves and states are saved in your browser's indexedDB and are automatically readied every time you visit the page. You only need to use export and import for backups.</li>
-          </ul>
-        </li>
+<body data-new-gr-c-s-check-loaded="14.1252.0" data-gr-ext-installed=""><div style="height: 1px;"></div><canvas class="background-matrix" width="890" height="920" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: -1; opacity: 1; transition: opacity 1s ease-in-out;"></canvas>
+    <!-- Navbar -->
+    
+    
+    <!-- Main content wrapper -->
+    <div class="apps-page-container">
+        <!-- Search Section -->
+        <section class="app-controls">
+            <div class="search-wrapper">
+                <div class="search-box">
+                    <input type="text" class="app-search-input" placeholder="Search apps..." aria-label="Search apps">
+                    <button class="search-button" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
 
-        <li>States
-          <ul>
-            <li class="pointer disabled" id="savestate">Save State</li>
-            <li class="pointer disabled" id="loadstate">Load State</li>
-            <li class="pointer disabled" id="undosavestate">Undo Save State</li>
-            <li class="pointer disabled" id="undoloadstate">Undo Load State</li>
-            <li class="pointer disabled" id="exportstate">Export State</li>
-            <li class="pointer disabled" id="importstate">Import State</li>
-            <li><a id="statesbutton" href="">Recover States</a></li>
-            <li class="menu-long menu-nohover" style="width:200px">You must save state before you export state; exported states are not states from the time of exporting.</li>
-          </ul>
-        </li>
+        <!-- Search Results Info -->
+        <div class="search-results-info" style="display: none;">
+            <!-- Will be populated by JS -->
+        </div>
 
-        <li>Screenshots
-          <ul>
-            <li class="pointer disabled" id="takescreenshot">Take Screenshot</li>
-            <li><a id="screenshotsbutton" href="">Screenshots</a></li>
-          </ul>
-        </li>
+        <!-- Apps Grid -->
+        <section class="apps-grid-container">
+            <div class="apps-grid" id="apps-grid"><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/YouTube.webp" alt="YouTube" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">YouTube</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/TikTok.webp" alt="TikTok" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">TikTok</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Twitter_X.webp" alt="Twitter X" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Twitter X</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Amazon.webp" alt="Amazon" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Amazon</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Pinterest.webp" alt="Pinterest" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Pinterest</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Snapchat.webp" alt="Snapchat" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Snapchat</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Discord.webp" alt="Discord" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Discord</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Twitch.webp" alt="Twitch" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Twitch</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/GitHub.webp" alt="GitHub" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">GitHub</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Soundcloud.webp" alt="Soundcloud" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Soundcloud</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/VS_Code.webp" alt="VS Code" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">VS Code</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Tumblr.webp" alt="Tumblr" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Tumblr</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Geforce_NOW.webp" alt="GeForce NOW" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">GeForce NOW</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Flix_HQ.webp" alt="Flix HQ" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Flix HQ</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Character_AI.webp" alt="Character.AI" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Character.AI</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Amazon_Luna.webp" alt="Amazon Luna" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Amazon Luna</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/HBO_MAX.webp" alt="HBO MAX" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">HBO MAX</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Wattpad.webp" alt="Wattpad" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Wattpad</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Newgrounds.webp" alt="Newgrounds" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Newgrounds</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Poki.webp" alt="Poki" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Poki</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Pixlr.webp" alt="Pixlr" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Pixlr</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Chess_com.webp" alt="Chess.com" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Chess.com</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Cool_Math_Games.webp" alt="Cool Math Games" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Cool Math Games</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Telegram.webp" alt="Telegram" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Telegram</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Temu.webp" alt="Temu" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Temu</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Shuttle_lol.webp" alt="Shuttle.lol" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Shuttle.lol</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Y8_Games.webp" alt="Y8 Games" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Y8 Games</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/webretro.webp" alt="webretro" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">webretro</h3></div></div><div class="app-card visible"><img class="app-image" src="/assets/imgs/a/Paramount_Plus.webp" alt="Paramount Plus" loading="lazy" dldanalyzed="true"><div class="app-overlay"><h3 class="app-title">Paramount Plus</h3></div></div></div>
+        </section>
 
-        <li>More
-          <ul>
-            <li class="disabled" title="May resolve minor scaling issues"><label><input type="checkbox" id="smooth" disabled>Smooth Scaling</label></li>
-            <li class="pointer" id="fullscreenbutton">Fullscreen</li>
-            <li class="pointer" id="consolebutton">Console</li>
-            <li>Theme
-              <ul>
-                <li class="menu-nohover">
-                  <form id="themeselector" class="menuform">
-                    <label><input type="radio" name="theme" value="iodinelight">Iodine (Light)</label>
-                    <label><input type="radio" name="theme" value="iodinedark">Iodine (Dark)</label>
-                    <label><input type="radio" name="theme" value="webplayer">Web Player</label>
-                    <label><input type="radio" name="theme" value="webplayernavy">Web Player (Navy)</label>
-                    <label class="disabled"><input type="radio" name="theme" value="emulatorjs" disabled>EmulatorJS</label>
-                  </form>
-                </li>
-              </ul>
-            </li>
-            <li class="pointer disabled" id="resetbutton2">Reset</li>
-            <li class="pointer disabled" id="mousegrabbutton">Mouse Grab</li>
-            <li class="pointer disabled" id="gamefocusbutton">Game Focus</li>
+        <!-- Scroll to Top Button -->
+        <button class="scroll-to-top visible" aria-label="Scroll to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
 
-            <li>Cheats
-              <ul class="xlmenu">
-                <li>How to apply a cheat code</li>
-                <li>1. Open the Menu</li>
-                <li>2. Scroll down</li>
-                <li>3. Click "Cheats"</li>
-                <li>4. Click "Add new cheat to bottom/top"</li>
-                <li>5. Click the new cheat that you just created</li>
-                <li>6. Click "Code"</li>
-                <li>7. Enter/paste the cheat code</li>
-                <li>8. When you are done, press enter</li>
-                <li>9. Click "Enabled" (Set to ON)</li>
-                <li>10. Go back to Cheats by clicking the bar on the top</li>
-                <li>11. Click "Apply Changes"</li>
-                <li>12. Exit the menu</li>
-                <li class="disabled">(More coming soon)</li>
-              </ul>
-            </li>
-
-            <li>Shaders
-              <ul>
-                <li class="disabled">(Coming soon)</li>
-              </ul>
-            </li>
-
-            <li id="pso">Pre-start Options
-              <ul>
-                <li class="menu-nohover">
-                  <form class="menuform" data-core="a5200">
-                    <label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-                  </form>
-
-                  <form class="menuform" data-core="mednafen_psx">
-                    <label><input type="checkbox" data-opt="highres">High Resolution</label>
-                    <label><input type="checkbox" data-opt="ditherscaling">Dither Scaling</label>
-                    <label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
-                    <label><input type="checkbox" data-opt="antijitter">PGXP Anti-jitter</label>
-                  </form>
-
-                  <form class="menuform" data-core="mednafen_psx_hw">
-                    <label><input type="checkbox" data-opt="softwarerenderer">Use Software Renderer</label>
-                    <label><input type="checkbox" data-opt="highres">High Resolution</label>
-                    <label><input type="checkbox" data-opt="ditherscaling">Dither Scaling</label>
-                    <label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
-                    <label><input type="checkbox" data-opt="antijitter">PGXP Anti-jitter</label>
-                  </form>
-
-                  <form class="menuform" data-core="mednafen_vb">
-                    <label><input type="checkbox" data-opt="anaglyph">Red/Blue Anaglyph</label>
-                  </form>
-
-                  <form class="menuform" data-core="mednafen_wswan">
-                    <label><input type="checkbox" data-opt="75hz">75hz Mode</label>
-                    <label><input type="checkbox" data-opt="portrait">Portrait Orientation</label>
-                    <label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-                  </form>
-
-                  <form class="menuform" data-core="melonds">
-                    <label><input type="checkbox" data-opt="leftright">Left/Right</label>
-                  </form>
-
-                  <form class="menuform" data-core="mgba">
-                    <label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-                  </form>
-
-                  <form class="menuform" data-core="mupen64plus_next">
-                    <label><input type="checkbox" data-opt="highres">High Resolution</label>
-                    <label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
-                  </form>
-
-                  <form class="menuform" data-core="o2em">
-                    <label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-                  </form>
-
-                  <form class="menuform" data-core="parallel_n64">
-                    <label><input type="checkbox" data-opt="highres">High Resolution</label>
-                    <label title="Use gles2n64 instead of Glide64"><input type="checkbox" data-opt="renderer2">Use glN64</label>
-                  </form>
-
-                  <form class="menuform" data-core="prosystem">
-                    <label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-                  </form>
-
-                  <form class="menuform" data-core="snes9x">
-                    <label><input type="checkbox" data-opt="mouse">SNES Mouse</label>
-                  </form>
-
-                  <form class="menuform" data-core="stella2014">
-                    <label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-                  </form>
-
-                  <form class="menuform" data-core="vecx">
-                    <label><input type="checkbox" data-opt="softwarerenderer">Use Software Renderer</label>
-                  </form>
-
-                  <form class="menuform" data-core="virtualjaguar">
-                    <label><input type="checkbox" data-opt="fastblitter">Fast Blitter</label>
-                  </form>
-
-                  <form class="menuform" data-core="yabause">
-                    <label><input type="checkbox" data-opt="frameskip">Enable Frameskip</label>
-                  </form>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-
-        <li class="pointer" id="downloadstandalonebutton">Download Standalone</li>
-        <li><a href="https://github.com/BinBashBanana/webretro" target="_blank">GitHub</a></li>
-      </ul>
-
-      <div id="menubutton" class="disabled">Menu</div>
-      <div id="pause" class="disabled">Pause</div>
+        <!-- Loading Overlay -->
+        <div class="loading-overlay">
+            <div class="loading-spinner"></div>
+        </div>
     </div>
 
-    <h1 id="webretrotitle">webretro</h1>
+    <!-- Custom App Windows Container -->
+    <div class="app-window-container" id="app-window-container">
+        <!-- App windows will be dynamically created here -->
+    <div class="app-window maximized focused" id="app-window-1" style="width: 800px; height: 600px; z-index: 1002; left: -344px; top: 206px;"><div class="app-window-content"><div class="app-window-loading" style="display: none;">Loading...</div><iframe class="app-window-iframe" src="https://firewall2.flamepass.com/@/index.html?uul=https%3A%2F%2Fbinbashbanana.github.io%2Fwebretro%2F" style="display: block;"></iframe></div><div class="app-window-resize-handle"></div></div></div>
 
-    <div id="ffd" style="display: block;">
-      <div id="ffdcontent">
-        <div id="coreselectarea" style="display: block;">
-          <h3>Select a Core</h3>
 
-          <div class="coreorderrow">
-            <label for="coreorder">Sort by:</label>
-            <select id="coreorder">
-              <option value="system" selected>System</option>
-              <option value="corename">Core name</option>
-              <option value="libraryname">Library name</option>
-            </select>
-          </div>
-
-          <ul class="corelistul">
-            <li><a href="?core=autodetect" class="greyer">AutoDetect (Slower to load)</a></li>
-            <span id="corelist">
-              <li><a href="?core=opera">Opera (3DO)</a></li>
-              <li><a href="?core=stella2014">Stella 2014 (Atari 2600)</a></li>
-              <li><a href="?core=a5200">a5200 (Atari 5200)</a></li>
-              <li><a href="?core=prosystem">ProSystem (Atari 7800)</a></li>
-              <li><a href="?core=virtualjaguar">Virtual Jaguar (Atari Jaguar)</a></li>
-              <li><a href="?core=handy">Handy (Atari Lynx)</a></li>
-              <li><a href="?core=gearcoleco">Gearcoleco (ColecoVision)</a></li>
-              <li><a href="?core=freechaf">FreeChaF (Fairchild Channel F)</a></li>
-              <li><a href="?core=mgba">mGBA (GB/GBC/GBA)</a></li>
-              <li><a href="?core=freeintv">FreeIntv (Intellivision)</a></li>
-              <li><a href="?core=neocd">NeoCD (Neo-Geo CD)</a></li>
-              <li><a href="?core=mednafen_ngp">Beetle NeoPop (Neo-Geo Pocket)</a></li>
-              <li><a href="?core=nestopia">Nestopia UE (NES)</a></li>
-              <li><a href="?core=mupen64plus_next">Mupen64Plus-Next (Nintendo 64)</a></li>
-              <li><a href="?core=parallel_n64">ParaLLEl N64 (Nintendo 64)</a></li>
-              <li><a href="?core=melonds">melonDS (Nintendo DS)</a></li>
-              <li><a href="?core=o2em">O2EM (Odyssey 2)</a></li>
-              <li><a href="?core=mednafen_psx_hw">Beetle PSX HW (PlayStation)</a></li>
-              <li><a href="?core=yabause">Yabause (Sega Saturn)</a></li>
-              <li><a href="?core=genesis_plus_gx">Genesis Plus GX (Sega Systems)</a></li>
-              <li><a href="?core=snes9x">Snes9x (SNES)</a></li>
-              <li><a href="?core=vecx">Vecx (Vectrex)</a></li>
-              <li><a href="?core=mednafen_vb">Beetle VB (Virtual Boy)</a></li>
-              <li><a href="?core=mednafen_wswan">Beetle WonderSwan (WonderSwan)</a></li>
-            </span>
-          </ul>
-        </div>
-
-        <div id="uploadarea" style="display: none;">
-          <h2><span id="systemname"></span> Emulator</h2>
-          <input type="button" id="upload" value="Choose ROM File" class="uploadbutton">
-          <br>
-          <img id="googledriveupload" class="uploadbutton uploadimage" title="Google Drive Upload" src="assets/icons/googledrive.png">
-          <img id="dropboxupload" class="uploadbutton uploadimage" title="Dropbox Upload" src="assets/icons/dropbox.png">
-          <img id="onedriveupload" class="uploadbutton uploadimage" title="OneDrive Upload" src="assets/icons/onedrive.png">
-        </div>
-      </div>
-
-      <div class="source">
-        <a href="https://github.com/BinBashBanana/webretro" target="_blank">GitHub</a>
-        <a href="https://github.com/libretro" target="_blank">Libretro</a>
-        <a href="" target="_blank" id="coregithub">Core Github</a>
-        <a href="https://emscripten.org" target="_blank">Emscripten</a>
-        <a href="info/" target="_blank">Info</a>
-        <span id="versionindicator" title="New features in this version: - 19 NEW CORES!!! - better core selection - installable PWA + file handler - fix scaling problems - pointerlock options - better menubar + dark theme - pre-start core options - fix broken iframe inputs - remove default controls list - add back some shaders - reset, fullscreen buttons - standalone html file - many more changes (check the github)">v6.5</span>
-      </div>
-    </div>
-
-    <p id="updatenotice"></p>
-    <input type="button" id="startbutton" value="Start">
-
-    <div id="loadingdiv">
-      <p class="loadingloading">Loading</p>
-      <p id="loadingtext"></p>
-      <progress id="loadingbar" max="1"></progress>
-    </div>
-
-    <canvas id="canvas" class="texturePixelated" width="1760" height="1710"></canvas>
-
-    <div id="canvasmask" style="top: 65px; height: calc(-65px + 100vh);">
-      <div id="resume">
-        <div>
-          <h1>Paused</h1>
-          <h3>Click to resume</h3>
-        </div>
-      </div>
-      <div id="sidealertholder"></div>
-    </div>
-
-    <div id="modals">
-      <div id="managers">
-        <div class="modaltop">
-          <h2 id="managertitle"></h2>
-          <span id="managerclose">✖</span>
-        </div>
-
-        <div id="keybindmanager">
-          <h4>Click on the right column to change a key. Press save when you are finished!</h4>
-          <table class="managertableparent managertableparentshort">
-            <tbody class="managertable" id="keybindtable"></tbody>
-          </table>
-          <input type="button" id="savekeybinds" class="specialblue" value="Save">
-          <input type="button" id="resetkeybinds" value="Reset to Default">
-        </div>
-
-        <div id="screenshotmanager">
-          <div id="screenshotsdiv"></div>
-          <div class="screenshotsbottom">
-            <h4>Screenshots do not persist through page reloads! Download your screenshots now!</h4>
-            <input type="button" id="downloadallscreenshots" value="Download All (zip)">
-          </div>
-        </div>
-
-        <div id="savemanager">
-          <table class="managertableparent">
-            <tbody class="managertable" id="savetable"></tbody>
-          </table>
-          <h4>Here, you can download all of the webretro saves and states made on <i>this domain</i>.</h4>
-          <div class="savesbottom">
-            <span id="quotatext"></span>
-          </div>
-        </div>
-
-        <div id="romselector">
-          <table class="managertableparent">
-            <tbody class="managertable" id="romselectortable"></tbody>
-          </table>
-          <h4 id="recommendedextensions"></h4>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</body>
-</html>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
