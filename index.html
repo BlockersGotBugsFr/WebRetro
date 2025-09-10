@@ -1,203 +1,213 @@
-<html lang="en"><head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-		<meta name="color-scheme" content="dark light">
-		<meta name="theme-color" content="#333333">
-		<title>webretro</title>
-		<meta name="description" content="RetroArch in your browser! Libretro cores compiled to WASM using emscripten, plus a custom UI.">
-		<meta name="robots" content="nofollow">
-		<meta name="og:title" content="webretro">
-		<meta name="og:type" content="website">
-		<meta name="og:image" content="assets/icons/icon204.png">
-		<meta name="og:url" content="https://binbashbanana.github.io/webretro/">
-		<link rel="stylesheet" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-bcsg.asq%3Ft%3D4.7" __uv-attr-href="assets/base.css?v=6.5">
-		<link rel="stylesheet" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-jqwknfou.asq" __uv-attr-href="assets/jswindow.css">
-		<link rel="shortcut icon" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-iaols-iaol224%2Cplg" __uv-attr-href="assets/icons/icon204.png">
-		<link rel="apple-touch-icon" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-iaols-iaolm054.rne" __uv-attr-href="assets/icons/iconm256.png">
-		<link rel="manifest" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Foalideqt%2Cjqol" __uv-attr-href="manifest.json">
-		<link rel="canonical" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F" __uv-attr-href="https://binbashbanana.github.io/webretro/">
-		<link rel="dns-prefetch" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-cfn%2Cjqdglkvp.lev%2F" __uv-attr-href="https://cdn.jsdelivr.net/">
-	<style>#canvas { top: 65px; height: calc(100vh - 65px); }</style></head>
-	<body data-theme="webplayer navy" class="coreselect" data-new-gr-c-s-check-loaded="14.1252.0" data-gr-ext-installed="">
-		<div class="main" id="mainarea">
-			<div id="menubar" style="height: 65px;">
-				<input type="checkbox" id="menuhider">
-				<label for="menuhider" class="menuhiderlabel"></label>
-				<ul id="menu">
-					<li class="menuback"><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F" title="Back to core selection" __uv-attr-href="."></a></li>
-					<li>Controls
-						<ul>
-							<li><a id="keybindsbutton" href="" __uv-attr-href="">Keybinds</a></li>
-							<li class="menu-long menu-nohover">Please note that these are just the bindings that are set, but in-game controls may vary.</li>
-							<li><a href="" title="Opens in new tab" onclick="window.open(window.URL.createObjectURL(new Blob([decodeURIComponent(atob('JTNDIURPQ1RZUEUlMjBodG1sJTNFJTNDaHRtbCUzRSUzQ2hlYWQlM0UlM0NtZXRhJTIwaHR0cC1lcXVpdiUzRCUyMnJlZnJlc2glMjIlMjBjb250ZW50JTNEJTIyMSUzQlVSTCUzRGh0dHBzJTNBJTJGJTJGcmV0cm9waWUub3JnLnVrJTJGZG9jcyUyRlJldHJvQXJjaC1Db25maWd1cmF0aW9uJTJGJTIzZGVmYXVsdC1jb3JlLWNvbnRyb2xzLWZvci1hbGwtZW11bGF0b3JzJTIyJTNFJTNDdGl0bGUlM0VSZWRpcmVjdGluZyUzQyUyRnRpdGxlJTNFJTNDJTJGaGVhZCUzRSUzQ2JvZHklM0UlM0NoMiUzRVJlZGlyZWN0aW5nLi4uJTNDJTJGaDIlM0UlM0MlMkZib2R5JTNFJTNDJTJGaHRtbCUzRQ=='))], {type: 'text/html'})));return false;" __uv-attr-href="" __uv-attr-onclick="window.open(window.URL.createObjectURL(new Blob([decodeURIComponent(atob('JTNDIURPQ1RZUEUlMjBodG1sJTNFJTNDaHRtbCUzRSUzQ2hlYWQlM0UlM0NtZXRhJTIwaHR0cC1lcXVpdiUzRCUyMnJlZnJlc2glMjIlMjBjb250ZW50JTNEJTIyMSUzQlVSTCUzRGh0dHBzJTNBJTJGJTJGcmV0cm9waWUub3JnLnVrJTJGZG9jcyUyRlJldHJvQXJjaC1Db25maWd1cmF0aW9uJTJGJTIzZGVmYXVsdC1jb3JlLWNvbnRyb2xzLWZvci1hbGwtZW11bGF0b3JzJTIyJTNFJTNDdGl0bGUlM0VSZWRpcmVjdGluZyUzQyUyRnRpdGxlJTNFJTNDJTJGaGVhZCUzRSUzQ2JvZHklM0UlM0NoMiUzRVJlZGlyZWN0aW5nLi4uJTNDJTJGaDIlM0UlM0MlMkZib2R5JTNFJTNDJTJGaHRtbCUzRQ=='))], {type: 'text/html'})));return false;">System Specifics</a></li>
-						</ul>
-					</li>
-					<li>Saves
-						<ul>
-							<li class="pointer disabled" id="savegame">Save Game</li>
-							<li class="pointer disabled" id="resetbutton">Reset</li>
-							<li class="pointer disabled" id="exportsave">Export SRAM</li>
-							<li class="pointer disabled" id="importsave">Import SRAM</li>
-							<li class="disabled"><label><input type="checkbox" id="autosave" checked="" disabled="">Autosave (5m)</label></li>
-							<li><a id="savesbutton" href="" __uv-attr-href="">Recover Saves</a></li>
-							<li class="menu-long menu-nohover" style="width:200px" __uv-attr-style="width: 200px;">Please note that in order for the game to be saved, you must use the save feature in-game (unless of course the game itself autosaves), then press the save button here (Or autosave must happen). <b>These saves are only for in-game save files. If you want to be able to save at any time, use save states.</b> Saves and states are saved in your browser's indexedDB and are automatically readied every time you visit the page. You only need to use export and import for backups.</li>
-						</ul>
-					</li>
-					<li>States
-						<ul>
-							<li class="pointer disabled" id="savestate">Save State</li>
-							<li class="pointer disabled" id="loadstate">Load State</li>
-							<li class="pointer disabled" id="undosavestate">Undo Save State</li>
-							<li class="pointer disabled" id="undoloadstate">Undo Load State</li>
-							<li class="pointer disabled" id="exportstate">Export State</li>
-							<li class="pointer disabled" id="importstate">Import State</li>
-							<li><a id="statesbutton" href="" __uv-attr-href="">Recover States</a></li>
-							<li class="menu-long menu-nohover" style="width:200px" __uv-attr-style="width: 200px;">You must save state before you export state; exported states are not states from the time of exporting.</li>
-						</ul>
-					</li>
-					<li>Screenshots
-						<ul>
-							<li class="pointer disabled" id="takescreenshot">Take Screenshot</li>
-							<li><a id="screenshotsbutton" href="" __uv-attr-href="">Screenshots</a></li>
-						</ul>
-					</li>
-					<li>More
-						<ul>
-							<li class="disabled" title="May resolve minor scaling issues"><label><input type="checkbox" id="smooth" disabled="">Smooth Scaling</label></li>
-							<li class="pointer" id="fullscreenbutton">Fullscreen</li>
-							<li class="pointer" id="consolebutton">Console</li>
-							<li>Theme
-								<ul>
-									<li class="menu-nohover">
-										<form id="themeselector" class="menuform">
-											<label><input type="radio" name="theme" value="iodinelight">Iodine (Light)</label>
-											<label><input type="radio" name="theme" value="iodinedark">Iodine (Dark)</label>
-											<label><input type="radio" name="theme" value="webplayer">Web Player</label>
-											<label><input type="radio" name="theme" value="webplayernavy">Web Player (Navy)</label>
-											<label class="disabled"><input type="radio" name="theme" value="emulatorjs" disabled="">EmulatorJS</label>
-										</form>
-									</li>
-								</ul>
-							</li>
-							<li class="pointer disabled" id="resetbutton2">Reset</li>
-							<li class="pointer disabled" id="mousegrabbutton">Mouse Grab</li>
-							<li class="pointer disabled" id="gamefocusbutton">Game Focus</li>
-							<li>Cheats
-								<ul class="xlmenu">
-									<li>How to apply a cheat code</li>
-									<li>1. Open the Menu</li>
-									<li>2. Scroll down</li>
-									<li>3. Click "Cheats"</li>
-									<li>4. Click "Add new cheat to bottom/top"</li>
-									<li>5. Click the new cheat that you just created</li>
-									<li>6. Click "Code"</li>
-									<li>7. Enter/paste the cheat code</li>
-									<li>8. When you are done, press enter</li>
-									<li>9. Click "Enabled" (Set to ON)</li>
-									<li>10. Go back to Cheats by clicking the bar on the top</li>
-									<li>11. Click "Apply Changes"</li>
-									<li>12. Exit the menu</li>
-									<li class="disabled">(More coming soon)</li>
-								</ul>
-							</li>
-							<li>Shaders
-								<ul>
-									<li class="disabled">(Coming soon)</li>
-								</ul>
-							</li>
-							<li id="pso">Pre-start Options
-								<ul>
-									<li class="menu-nohover">
-										<form class="menuform" data-core="a5200">
-											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-										</form>
-										<form class="menuform" data-core="mednafen_psx">
-											<label><input type="checkbox" data-opt="highres">High Resolution</label>
-											<label><input type="checkbox" data-opt="ditherscaling">Dither Scaling</label>
-											<label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
-											<label><input type="checkbox" data-opt="antijitter">PGXP Anti-jitter</label>
-										</form>
-										<form class="menuform" data-core="mednafen_psx_hw">
-											<label><input type="checkbox" data-opt="softwarerenderer">Use Software Renderer</label>
-											<label><input type="checkbox" data-opt="highres">High Resolution</label>
-											<label><input type="checkbox" data-opt="ditherscaling">Dither Scaling</label>
-											<label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
-											<label><input type="checkbox" data-opt="antijitter">PGXP Anti-jitter</label>
-										</form>
-										<form class="menuform" data-core="mednafen_vb">
-											<label><input type="checkbox" data-opt="anaglyph">Red/Blue Anaglyph</label>
-										</form>
-										<form class="menuform" data-core="mednafen_wswan">
-											<label><input type="checkbox" data-opt="75hz">75hz Mode</label>
-											<label><input type="checkbox" data-opt="portrait">Portrait Orientation</label>
-											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-										</form>
-										<form class="menuform" data-core="melonds">
-											<label><input type="checkbox" data-opt="leftright">Left/Right</label>
-										</form>
-										<form class="menuform" data-core="mgba">
-											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-										</form>
-										<form class="menuform" data-core="mupen64plus_next">
-											<label><input type="checkbox" data-opt="highres">High Resolution</label>
-											<label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
-										</form>
-										<form class="menuform" data-core="o2em">
-											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-										</form>
-										<form class="menuform" data-core="parallel_n64">
-											<label><input type="checkbox" data-opt="highres">High Resolution</label>
-											<label title="Use gles2n64 instead of Glide64"><input type="checkbox" data-opt="renderer2">Use glN64</label>
-										</form>
-										<form class="menuform" data-core="prosystem">
-											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-										</form>
-										<form class="menuform" data-core="snes9x">
-											<label><input type="checkbox" data-opt="mouse">SNES Mouse</label>
-										</form>
-										<form class="menuform" data-core="stella2014">
-											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-										</form>
-										<form class="menuform" data-core="vecx">
-											<label><input type="checkbox" data-opt="softwarerenderer">Use Software Renderer</label>
-										</form>
-										<form class="menuform" data-core="virtualjaguar">
-											<label><input type="checkbox" data-opt="fastblitter">Fast Blitter</label>
-										</form>
-										<form class="menuform" data-core="yabause">
-											<label><input type="checkbox" data-opt="frameskip">Enable Frameskip</label>
-										</form>
-									</li>
-								</ul>
-							</li>
-							<li class="pointer" id="downloadstandalonebutton">Download Standalone</li>
-							<li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-gktju%60.aoo%2F%40ilBcsjBcncnc%2Fue%60rgtpo" target="_blank" __uv-attr-href="https://github.com/BinBashBanana/webretro">GitHub</a></li>
-						</ul>
-					</li>
-					<li id="menubutton" class="disabled">
-						Menu
-					</li>
-					<li id="pause" class="disabled">
-						Pause
-					</li>
-				</ul>
-			</div>
-			<h1 id="webretrotitle">webretro</h1>
-			<div id="ffd" style="display: block;">
-				<div id="ffdcontent">
-					<div id="coreselectarea" style="display: block;">
-						<h3>Select a Core</h3>
-						<div class="coreorderrow">
-							<label for="coreorder">Sort by:</label>
-							<select id="coreorder">
-								<option value="system" selected="">System</option>
-								<option value="corename">Core name</option>
-								<option value="libraryname">Library name</option>
-							</select>
-						</div>
-						<ul class="corelistul">
-							<li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dcuvofeveat" class="greyer" __uv-attr-href="?core=autodetect">AutoDetect (Slower to load)</a></li>
-							<span id="corelist"><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dmpgrc" __uv-attr-href="?core=opera">Opera (3DO)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dqtglna0034" __uv-attr-href="?core=stella2014">Stella 2014 (Atari 2600)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dc5002" __uv-attr-href="?core=a5200">a5200 (Atari 5200)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Drrms%7Bsveo" __uv-attr-href="?core=prosystem">ProSystem (Atari 7800)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dtiptwanjcgwap" __uv-attr-href="?core=virtualjaguar">Virtual Jaguar (Atari Jaguar)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Djald%7B" __uv-attr-href="?core=handy">Handy (Atari Lynx)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Deecraoneao" __uv-attr-href="?core=gearcoleco">Gearcoleco (ColecoVision)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Ddrgeahcf" __uv-attr-href="?core=freechaf">FreeChaF (Fairchild Channel F)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dog%60a" __uv-attr-href="?core=mgba">mGBA (GB/GBC/GBA)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Ddrgeknvv" __uv-attr-href="?core=freeintv">FreeIntv (Intellivision)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dlemcf" __uv-attr-href="?core=neocd">NeoCD (Neo-Geo CD)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Doefncfgn%5Dnep" __uv-attr-href="?core=mednafen_ngp">Beetle NeoPop (Neo-Geo Pocket)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dleqtmpka" __uv-attr-href="?core=nestopia">Nestopia UE (NES)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dourel66pnuq_lezt" __uv-attr-href="?core=mupen64plus_next">Mupen64Plus-Next (Nintendo 64)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Drapanlgl%5Dn44" __uv-attr-href="?core=parallel_n64">ParaLLEl N64 (Nintendo 64)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Doenoldq" __uv-attr-href="?core=melonds">melonDS (Nintendo DS)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dm2gm" __uv-attr-href="?core=o2em">O2EM (Odyssey 2)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Doefncfgn%5Dpqx%5Dhu" __uv-attr-href="?core=mednafen_psx_hw">Beetle PSX HW (PlayStation)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3D%7Ba%60awsg" __uv-attr-href="?core=yabause">Yabause (Sega Saturn)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Deeleqiq_rlws%5Dgz" __uv-attr-href="?core=genesis_plus_gx">Genesis Plus GX (Sega Systems)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dqngs%3Bx" __uv-attr-href="?core=snes9x">Snes9x (SNES)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dteax" __uv-attr-href="?core=vecx">Vecx (Vectrex)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Doefncfgn%5Dv%60" __uv-attr-href="?core=mednafen_vb">Beetle VB (Virtual Boy)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Doefncfgn%5Dwqwcn" __uv-attr-href="?core=mednafen_wswan">Beetle WonderSwan (WonderSwan)</a></li></span>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>webretro</title>
+    <meta name="description" content="RetroArch in your browser! Libretro cores compiled to WASM using emscripten, plus a custom UI.">
+    <link rel="stylesheet" href="assets/base.css?v=6.5">
+    <link rel="stylesheet" href="assets/jswindow.css">
+    <link rel="icon" href="assets/icons/icon204.png">
+    <link rel="apple-touch-icon" href="assets/icons/iconm256.png">
+    <link rel="manifest" href="manifest.json">
+    <style>#canvas { top: 65px; height: calc(100vh - 65px); }</style>
+</head>
+<body data-theme="webplayer navy" class="coreselect">
+    <div class="main" id="mainarea">
+        <div id="menubar" style="height: 65px;">
+            <input type="checkbox" id="menuhider">
+            <label for="menuhider" class="menuhiderlabel"></label>
+            <ul id="menu">
+                <li class="menuback"><a href="." title="Back to core selection"></a></li>
+                <li>Controls
+                    <ul>
+                        <li><a id="keybindsbutton" href="">Keybinds</a></li>
+                        <li class="menu-long menu-nohover">Please note that these are just the bindings that are set, but in-game controls may vary.</li>
+                        <li><a href="https://retroopie.org.uk/docs/RetroArch-Configuration/#default-core-controls-for-all-emulators" title="Opens in new tab" target="_blank">System Specifics</a></li>
+                    </ul>
+                </li>
+                <li>Saves
+                    <ul>
+                        <li class="pointer disabled" id="savegame">Save Game</li>
+                        <li class="pointer disabled" id="resetbutton">Reset</li>
+                        <li class="pointer disabled" id="exportsave">Export SRAM</li>
+                        <li class="pointer disabled" id="importsave">Import SRAM</li>
+                        <li class="disabled"><label><input type="checkbox" id="autosave" checked="" disabled="">Autosave (5m)</label></li>
+                        <li><a id="savesbutton" href="">Recover Saves</a></li>
+                        <li class="menu-long menu-nohover" style="width:200px">Please note that in order for the game to be saved, you must use the save feature in-game (unless of course the game itself autosaves), then press the save button here (Or autosave must happen). <b>These saves are only for in-game save files. If you want to be able to save at any time, use save states.</b> Saves and states are saved in your browser's indexedDB and are automatically readied every time you visit the page. You only need to use export and import for backups.</li>
+                    </ul>
+                </li>
+                <li>States
+                    <ul>
+                        <li class="pointer disabled" id="savestate">Save State</li>
+                        <li class="pointer disabled" id="loadstate">Load State</li>
+                        <li class="pointer disabled" id="undosavestate">Undo Save State</li>
+                        <li class="pointer disabled" id="undoloadstate">Undo Load State</li>
+                        <li class="pointer disabled" id="exportstate">Export State</li>
+                        <li class="pointer disabled" id="importstate">Import State</li>
+                        <li><a id="statesbutton" href="">Recover States</a></li>
+                        <li class="menu-long menu-nohover" style="width:200px">You must save state before you export state; exported states are not states from the time of exporting.</li>
+                    </ul>
+                </li>
+                <li>Screenshots
+                    <ul>
+                        <li class="pointer disabled" id="takescreenshot">Take Screenshot</li>
+                        <li><a id="screenshotsbutton" href="">Screenshots</a></li>
+                    </ul>
+                </li>
+                <li>More
+                    <ul>
+                        <li class="disabled" title="May resolve minor scaling issues"><label><input type="checkbox" id="smooth" disabled="">Smooth Scaling</label></li>
+                        <li class="pointer" id="fullscreenbutton">Fullscreen</li>
+                        <li class="pointer" id="consolebutton">Console</li>
+                        <li>Theme
+                            <ul>
+                                <li class="menu-nohover">
+                                    <form id="themeselector" class="menuform">
+                                        <label><input type="radio" name="theme" value="iodinelight">Iodine (Light)</label>
+                                        <label><input type="radio" name="theme" value="iodinedark">Iodine (Dark)</label>
+                                        <label><input type="radio" name="theme" value="webplayer">Web Player</label>
+                                        <label><input type="radio" name="theme" value="webplayernavy">Web Player (Navy)</label>
+                                        <label class="disabled"><input type="radio" name="theme" value="emulatorjs" disabled="">EmulatorJS</label>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="pointer disabled" id="resetbutton2">Reset</li>
+                        <li class="pointer disabled" id="mousegrabbutton">Mouse Grab</li>
+                        <li class="pointer disabled" id="gamefocusbutton">Game Focus</li>
+                        <li>Cheats
+                            <ul class="xlmenu">
+                                <li>How to apply a cheat code</li>
+                                <li>1. Open the Menu</li>
+                                <li>2. Scroll down</li>
+                                <li>3. Click "Cheats"</li>
+                                <li>4. Click "Add new cheat to bottom/top"</li>
+                                <li>5. Click the new cheat that you just created</li>
+                                <li>6. Click "Code"</li>
+                                <li>7. Enter/paste the cheat code</li>
+                                <li>8. When you are done, press enter</li>
+                                <li>9. Click "Enabled" (Set to ON)</li>
+                                <li>10. Go back to Cheats by clicking the bar on the top</li>
+                                <li>11. Click "Apply Changes"</li>
+                                <li>12. Exit the menu</li>
+                                <li class="disabled">(More coming soon)</li>
+                            </ul>
+                        </li>
+                        <li>Shaders
+                            <ul>
+                                <li class="disabled">(Coming soon)</li>
+                            </ul>
+                        </li>
+
+					                        <li id="pso">Pre-start Options
+                            <ul>
+                                <li class="menu-nohover">
+                                    <form class="menuform" data-core="a5200">
+                                        <label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+                                    </form>
+                                    <form class="menuform" data-core="mednafen_psx">
+                                        <label><input type="checkbox" data-opt="highres">High Resolution</label>
+                                        <label><input type="checkbox" data-opt="ditherscaling">Dither Scaling</label>
+                                        <label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
+                                        <label><input type="checkbox" data-opt="antijitter">PGXP Anti-jitter</label>
+                                    </form>
+                                    <form class="menuform" data-core="mednafen_psx_hw">
+                                        <label><input type="checkbox" data-opt="softwarerenderer">Use Software Renderer</label>
+                                        <label><input type="checkbox" data-opt="highres">High Resolution</label>
+                                        <label><input type="checkbox" data-opt="ditherscaling">Dither Scaling</label>
+                                        <label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
+                                        <label><input type="checkbox" data-opt="antijitter">PGXP Anti-jitter</label>
+                                    </form>
+                                    <form class="menuform" data-core="mednafen_vb">
+                                        <label><input type="checkbox" data-opt="anaglyph">Red/Blue Anaglyph</label>
+                                    </form>
+                                    <form class="menuform" data-core="mednafen_wswan">
+                                        <label><input type="checkbox" data-opt="75hz">75hz Mode</label>
+                                        <label><input type="checkbox" data-opt="portrait">Portrait Orientation</label>
+                                        <label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+                                    </form>
+                                    <form class="menuform" data-core="melonds">
+                                        <label><input type="checkbox" data-opt="leftright">Left/Right</label>
+                                    </form>
+                                    <form class="menuform" data-core="mgba">
+                                        <label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+                                    </form>
+                                    <form class="menuform" data-core="mupen64plus_next">
+                                        <label><input type="checkbox" data-opt="highres">High Resolution</label>
+                                        <label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
+                                    </form>
+                                    <form class="menuform" data-core="o2em">
+                                        <label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+                                    </form>
+                                    <form class="menuform" data-core="parallel_n64">
+                                        <label><input type="checkbox" data-opt="highres">High Resolution</label>
+                                        <label title="Use gles2n64 instead of Glide64"><input type="checkbox" data-opt="renderer2">Use glN64</label>
+                                    </form>
+                                    <form class="menuform" data-core="prosystem">
+                                        <label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+                                    </form>
+                                    <form class="menuform" data-core="snes9x">
+                                        <label><input type="checkbox" data-opt="mouse">SNES Mouse</label>
+                                    </form>
+                                    <form class="menuform" data-core="stella2014">
+                                        <label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+                                    </form>
+                                    <form class="menuform" data-core="vecx">
+                                        <label><input type="checkbox" data-opt="softwarerenderer">Use Software Renderer</label>
+                                    </form>
+                                    <form class="menuform" data-core="virtualjaguar">
+                                        <label><input type="checkbox" data-opt="fastblitter">Fast Blitter</label>
+                                    </form>
+                                    <form class="menuform" data-core="yabause">
+                                        <label><input type="checkbox" data-opt="frameskip">Enable Frameskip</label>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="pointer" id="downloadstandalonebutton">Download Standalone</li>
+                        <li><a href="https://github.com/BinBashBanana/webretro" target="_blank">GitHub</a></li>
+                    </ul>
+                </li>
+                <li id="menubutton" class="disabled">
+                    Menu
+                </li>
+                <li id="pause" class="disabled">
+                    Pause
+                </li>
+            </ul>
+        </div>
+        <h1 id="webretrotitle">webretro</h1>
+        <div id="ffd" style="display: block;">
+            <div id="ffdcontent">
+                <div id="coreselectarea" style="display: block;">
+                    <h3>Select a Core</h3>
+                    <div class="coreorderrow">
+                        <label for="coreorder">Sort by:</label>
+                        <select id="coreorder">
+                            <option value="system" selected="">System</option>
+                            <option value="corename">Core name</option>
+                            <option value="libraryname">Library name</option>
+                        </select>
+                    </div>
+                    <ul class="corelistul">
+                        <li><a href="?core=autodetect" class="greyer">AutoDetect (Slower to load)</a></li>
+                        <span id="corelist">
+                            <li><a href="?core=opera">Opera (3DO)</a></li>
+                            <li><a href="?core=stella2014">Stella 2014 (Atari 2600)</a></li>
+                            <li><a href="?core=a5200">a5200 (Atari 5200)</a></li>
+                            <li><a href="?core=prosystem">ProSystem (Atari 7800)</a></li>
+                            <li><a href="?core=virtualjaguar">Virtual Jaguar (Atari Jaguar)</a></li>
+                            <li><a href="?core=handy">Handy (Atari Lynx)</a></li>
+                            <li><a href="?core=gearcoleco">Gearcoleco (ColecoVision)</a></li>
+                            <li><a href="?core=freechaf">FreeChaF (Fairchild Channel F)</a></li>
+                            <li><a href="?core=mgba">mGBA (GB/GBC/GBA)</a></li>
+                            <li><a href="?core=freeintv">FreeIntv (Intellivision)</a></li>
+                            <li><a href="?core=neocd">NeoCD (Neo-Geo CD)</a></li>
+                            <li><a href="?core=mednafen_ngp">Beetle NeoPop (Neo-Geo Pocket)</a></li>
+                            <li><a href="?core=nestopia">Nestopia UE (NES)</a></li>
+                            <li><a href="?core=mupen64plus_next">Mupen64Plus-Next (Nintendo 64)</a></li>
+                        </span>
+
 						</ul>
 					</div>
 					<div id="uploadarea" style="display: none;">
