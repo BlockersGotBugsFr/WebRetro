@@ -1,221 +1,365 @@
-<html lang="en"><head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-		<meta name="color-scheme" content="dark light">
-		<meta name="theme-color" content="#333333">
-		<title>webretro</title>
-		<meta name="description" content="RetroArch in your browser! Libretro cores compiled to WASM using emscripten, plus a custom UI.">
-		<meta name="robots" content="nofollow">
-		<meta name="og:title" content="webretro">
-		<meta name="og:type" content="website">
-		<meta name="og:image" content="assets/icons/icon204.png">
-		<meta name="og:url" content="https://binbashbanana.github.io/webretro/">
-		<link rel="stylesheet" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-bcsg.asq%3Ft%3D4.7" __uv-attr-href="assets/base.css?v=6.5">
-		<link rel="stylesheet" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-jqwknfou.asq" __uv-attr-href="assets/jswindow.css">
-		<link rel="shortcut icon" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-iaols-iaol224%2Cplg" __uv-attr-href="assets/icons/icon204.png">
-		<link rel="apple-touch-icon" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-iaols-iaolm054.rne" __uv-attr-href="assets/icons/iconm256.png">
-		<link rel="manifest" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Foalideqt%2Cjqol" __uv-attr-href="manifest.json">
-		<link rel="canonical" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F" __uv-attr-href="https://binbashbanana.github.io/webretro/">
-		<link rel="dns-prefetch" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-cfn%2Cjqdglkvp.lev%2F" __uv-attr-href="https://cdn.jsdelivr.net/">
-	<style>#canvas { top: 65px; height: calc(100vh - 65px); }</style></head>
-	<body data-theme="webplayer navy" class="coreselect" data-new-gr-c-s-check-loaded="14.1252.0" data-gr-ext-installed="">
-		<div class="main" id="mainarea">
-			<div id="menubar" style="height: 65px;">
-				<input type="checkbox" id="menuhider">
-				<label for="menuhider" class="menuhiderlabel"></label>
-				<ul id="menu">
-					<li class="menuback"><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F" title="Back to core selection" __uv-attr-href="."></a></li>
-					<li>Controls
-						<ul>
-							<li><a id="keybindsbutton" href="" __uv-attr-href="">Keybinds</a></li>
-							<li class="menu-long menu-nohover">Please note that these are just the bindings that are set, but in-game controls may vary.</li>
-							<li><a href="" title="Opens in new tab" onclick="window.open(window.URL.createObjectURL(new Blob([decodeURIComponent(atob('JTNDIURPQ1RZUEUlMjBodG1sJTNFJTNDaHRtbCUzRSUzQ2hlYWQlM0UlM0NtZXRhJTIwaHR0cC1lcXVpdiUzRCUyMnJlZnJlc2glMjIlMjBjb250ZW50JTNEJTIyMSUzQlVSTCUzRGh0dHBzJTNBJTJGJTJGcmV0cm9waWUub3JnLnVrJTJGZG9jcyUyRlJldHJvQXJjaC1Db25maWd1cmF0aW9uJTJGJTIzZGVmYXVsdC1jb3JlLWNvbnRyb2xzLWZvci1hbGwtZW11bGF0b3JzJTIyJTNFJTNDdGl0bGUlM0VSZWRpcmVjdGluZyUzQyUyRnRpdGxlJTNFJTNDJTJGaGVhZCUzRSUzQ2JvZHklM0UlM0NoMiUzRVJlZGlyZWN0aW5nLi4uJTNDJTJGaDIlM0UlM0MlMkZib2R5JTNFJTNDJTJGaHRtbCUzRQ=='))], {type: 'text/html'})));return false;" __uv-attr-href="" __uv-attr-onclick="window.open(window.URL.createObjectURL(new Blob([decodeURIComponent(atob('JTNDIURPQ1RZUEUlMjBodG1sJTNFJTNDaHRtbCUzRSUzQ2hlYWQlM0UlM0NtZXRhJTIwaHR0cC1lcXVpdiUzRCUyMnJlZnJlc2glMjIlMjBjb250ZW50JTNEJTIyMSUzQlVSTCUzRGh0dHBzJTNBJTJGJTJGcmV0cm9waWUub3JnLnVrJTJGZG9jcyUyRlJldHJvQXJjaC1Db25maWd1cmF0aW9uJTJGJTIzZGVmYXVsdC1jb3JlLWNvbnRyb2xzLWZvci1hbGwtZW11bGF0b3JzJTIyJTNFJTNDdGl0bGUlM0VSZWRpcmVjdGluZyUzQyUyRnRpdGxlJTNFJTNDJTJGaGVhZCUzRSUzQ2JvZHklM0UlM0NoMiUzRVJlZGlyZWN0aW5nLi4uJTNDJTJGaDIlM0UlM0MlMkZib2R5JTNFJTNDJTJGaHRtbCUzRQ=='))], {type: 'text/html'})));return false;">System Specifics</a></li>
-						</ul>
-					</li>
-					<li>Saves
-						<ul>
-							<li class="pointer disabled" id="savegame">Save Game</li>
-							<li class="pointer disabled" id="resetbutton">Reset</li>
-							<li class="pointer disabled" id="exportsave">Export SRAM</li>
-							<li class="pointer disabled" id="importsave">Import SRAM</li>
-							<li class="disabled"><label><input type="checkbox" id="autosave" checked="" disabled="">Autosave (5m)</label></li>
-							<li><a id="savesbutton" href="" __uv-attr-href="">Recover Saves</a></li>
-							<li class="menu-long menu-nohover" style="width:200px" __uv-attr-style="width: 200px;">Please note that in order for the game to be saved, you must use the save feature in-game (unless of course the game itself autosaves), then press the save button here (Or autosave must happen). <b>These saves are only for in-game save files. If you want to be able to save at any time, use save states.</b> Saves and states are saved in your browser's indexedDB and are automatically readied every time you visit the page. You only need to use export and import for backups.</li>
-						</ul>
-					</li>
-					<li>States
-						<ul>
-							<li class="pointer disabled" id="savestate">Save State</li>
-							<li class="pointer disabled" id="loadstate">Load State</li>
-							<li class="pointer disabled" id="undosavestate">Undo Save State</li>
-							<li class="pointer disabled" id="undoloadstate">Undo Load State</li>
-							<li class="pointer disabled" id="exportstate">Export State</li>
-							<li class="pointer disabled" id="importstate">Import State</li>
-							<li><a id="statesbutton" href="" __uv-attr-href="">Recover States</a></li>
-							<li class="menu-long menu-nohover" style="width:200px" __uv-attr-style="width: 200px;">You must save state before you export state; exported states are not states from the time of exporting.</li>
-						</ul>
-					</li>
-					<li>Screenshots
-						<ul>
-							<li class="pointer disabled" id="takescreenshot">Take Screenshot</li>
-							<li><a id="screenshotsbutton" href="" __uv-attr-href="">Screenshots</a></li>
-						</ul>
-					</li>
-					<li>More
-						<ul>
-							<li class="disabled" title="May resolve minor scaling issues"><label><input type="checkbox" id="smooth" disabled="">Smooth Scaling</label></li>
-							<li class="pointer" id="fullscreenbutton">Fullscreen</li>
-							<li class="pointer" id="consolebutton">Console</li>
-							<li>Theme
-								<ul>
-									<li class="menu-nohover">
-										<form id="themeselector" class="menuform">
-											<label><input type="radio" name="theme" value="iodinelight">Iodine (Light)</label>
-											<label><input type="radio" name="theme" value="iodinedark">Iodine (Dark)</label>
-											<label><input type="radio" name="theme" value="webplayer">Web Player</label>
-											<label><input type="radio" name="theme" value="webplayernavy">Web Player (Navy)</label>
-											<label class="disabled"><input type="radio" name="theme" value="emulatorjs" disabled="">EmulatorJS</label>
-										</form>
-									</li>
-								</ul>
-							</li>
-							<li class="pointer disabled" id="resetbutton2">Reset</li>
-							<li class="pointer disabled" id="mousegrabbutton">Mouse Grab</li>
-							<li class="pointer disabled" id="gamefocusbutton">Game Focus</li>
-							<li>Cheats
-								<ul class="xlmenu">
-									<li>How to apply a cheat code</li>
-									<li>1. Open the Menu</li>
-									<li>2. Scroll down</li>
-									<li>3. Click "Cheats"</li>
-									<li>4. Click "Add new cheat to bottom/top"</li>
-									<li>5. Click the new cheat that you just created</li>
-									<li>6. Click "Code"</li>
-									<li>7. Enter/paste the cheat code</li>
-									<li>8. When you are done, press enter</li>
-									<li>9. Click "Enabled" (Set to ON)</li>
-									<li>10. Go back to Cheats by clicking the bar on the top</li>
-									<li>11. Click "Apply Changes"</li>
-									<li>12. Exit the menu</li>
-									<li class="disabled">(More coming soon)</li>
-								</ul>
-							</li>
-							<li>Shaders
-								<ul>
-									<li class="disabled">(Coming soon)</li>
-								</ul>
-							</li>
-							<li id="pso">Pre-start Options
-								<ul>
-									<li class="menu-nohover">
-										<form class="menuform" data-core="a5200">
-											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-										</form>
-										<form class="menuform" data-core="mednafen_psx">
-											<label><input type="checkbox" data-opt="highres">High Resolution</label>
-											<label><input type="checkbox" data-opt="ditherscaling">Dither Scaling</label>
-											<label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
-											<label><input type="checkbox" data-opt="antijitter">PGXP Anti-jitter</label>
-										</form>
-										<form class="menuform" data-core="mednafen_psx_hw">
-											<label><input type="checkbox" data-opt="softwarerenderer">Use Software Renderer</label>
-											<label><input type="checkbox" data-opt="highres">High Resolution</label>
-											<label><input type="checkbox" data-opt="ditherscaling">Dither Scaling</label>
-											<label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
-											<label><input type="checkbox" data-opt="antijitter">PGXP Anti-jitter</label>
-										</form>
-										<form class="menuform" data-core="mednafen_vb">
-											<label><input type="checkbox" data-opt="anaglyph">Red/Blue Anaglyph</label>
-										</form>
-										<form class="menuform" data-core="mednafen_wswan">
-											<label><input type="checkbox" data-opt="75hz">75hz Mode</label>
-											<label><input type="checkbox" data-opt="portrait">Portrait Orientation</label>
-											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-										</form>
-										<form class="menuform" data-core="melonds">
-											<label><input type="checkbox" data-opt="leftright">Left/Right</label>
-										</form>
-										<form class="menuform" data-core="mgba">
-											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-										</form>
-										<form class="menuform" data-core="mupen64plus_next">
-											<label><input type="checkbox" data-opt="highres">High Resolution</label>
-											<label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
-										</form>
-										<form class="menuform" data-core="o2em">
-											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-										</form>
-										<form class="menuform" data-core="parallel_n64">
-											<label><input type="checkbox" data-opt="highres">High Resolution</label>
-											<label title="Use gles2n64 instead of Glide64"><input type="checkbox" data-opt="renderer2">Use glN64</label>
-										</form>
-										<form class="menuform" data-core="prosystem">
-											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-										</form>
-										<form class="menuform" data-core="snes9x">
-											<label><input type="checkbox" data-opt="mouse">SNES Mouse</label>
-										</form>
-										<form class="menuform" data-core="stella2014">
-											<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
-										</form>
-										<form class="menuform" data-core="vecx">
-											<label><input type="checkbox" data-opt="softwarerenderer">Use Software Renderer</label>
-										</form>
-										<form class="menuform" data-core="virtualjaguar">
-											<label><input type="checkbox" data-opt="fastblitter">Fast Blitter</label>
-										</form>
-										<form class="menuform" data-core="yabause">
-											<label><input type="checkbox" data-opt="frameskip">Enable Frameskip</label>
-										</form>
-									</li>
-								</ul>
-							</li>
-							<li class="pointer" id="downloadstandalonebutton">Download Standalone</li>
-							<li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-gktju%60.aoo%2F%40ilBcsjBcncnc%2Fue%60rgtpo" target="_blank" __uv-attr-href="https://github.com/BinBashBanana/webretro">GitHub</a></li>
-						</ul>
-					</li>
-					<li id="menubutton" class="disabled">
-						Menu
-					</li>
-					<li id="pause" class="disabled">
-						Pause
-					</li>
-				</ul>
-			</div>
-			<h1 id="webretrotitle">webretro</h1>
-			<div id="ffd" style="display: block;">
-				<div id="ffdcontent">
-					<div id="coreselectarea" style="display: block;">
-						<h3>Select a Core</h3>
-						<div class="coreorderrow">
-							<label for="coreorder">Sort by:</label>
-							<select id="coreorder">
-								<option value="system" selected="">System</option>
-								<option value="corename">Core name</option>
-								<option value="libraryname">Library name</option>
-							</select>
-						</div>
-						<ul class="corelistul">
-							<li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dcuvofeveat" class="greyer" __uv-attr-href="?core=autodetect">AutoDetect (Slower to load)</a></li>
-							<span id="corelist"><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dmpgrc" __uv-attr-href="?core=opera">Opera (3DO)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dqtglna0034" __uv-attr-href="?core=stella2014">Stella 2014 (Atari 2600)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dc5002" __uv-attr-href="?core=a5200">a5200 (Atari 5200)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Drrms%7Bsveo" __uv-attr-href="?core=prosystem">ProSystem (Atari 7800)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dtiptwanjcgwap" __uv-attr-href="?core=virtualjaguar">Virtual Jaguar (Atari Jaguar)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Djald%7B" __uv-attr-href="?core=handy">Handy (Atari Lynx)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Deecraoneao" __uv-attr-href="?core=gearcoleco">Gearcoleco (ColecoVision)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Ddrgeahcf" __uv-attr-href="?core=freechaf">FreeChaF (Fairchild Channel F)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dog%60a" __uv-attr-href="?core=mgba">mGBA (GB/GBC/GBA)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Ddrgeknvv" __uv-attr-href="?core=freeintv">FreeIntv (Intellivision)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dlemcf" __uv-attr-href="?core=neocd">NeoCD (Neo-Geo CD)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Doefncfgn%5Dnep" __uv-attr-href="?core=mednafen_ngp">Beetle NeoPop (Neo-Geo Pocket)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dleqtmpka" __uv-attr-href="?core=nestopia">Nestopia UE (NES)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dourel66pnuq_lezt" __uv-attr-href="?core=mupen64plus_next">Mupen64Plus-Next (Nintendo 64)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Drapanlgl%5Dn44" __uv-attr-href="?core=parallel_n64">ParaLLEl N64 (Nintendo 64)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Doenoldq" __uv-attr-href="?core=melonds">melonDS (Nintendo DS)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dm2gm" __uv-attr-href="?core=o2em">O2EM (Odyssey 2)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Doefncfgn%5Dpqx%5Dhu" __uv-attr-href="?core=mednafen_psx_hw">Beetle PSX HW (PlayStation)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3D%7Ba%60awsg" __uv-attr-href="?core=yabause">Yabause (Sega Saturn)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Deeleqiq_rlws%5Dgz" __uv-attr-href="?core=genesis_plus_gx">Genesis Plus GX (Sega Systems)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dqngs%3Bx" __uv-attr-href="?core=snes9x">Snes9x (SNES)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dteax" __uv-attr-href="?core=vecx">Vecx (Vectrex)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Doefncfgn%5Dv%60" __uv-attr-href="?core=mednafen_vb">Beetle VB (Virtual Boy)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Doefncfgn%5Dwqwcn" __uv-attr-href="?core=mednafen_wswan">Beetle WonderSwan (WonderSwan)</a></li></span>
-						</ul>
-					</div>
-					<div id="uploadarea" style="display: none;">
-						<h2><span id="systemname"></span> Emulator</h2>
-						<input type="button" id="upload" value="Choose ROM File" class="uploadbutton">
-						<br>
-						<img id="googledriveupload" class="uploadbutton uploadimage" title="Google Drive Upload" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-iaols-gmoelgdpite%2Cplg" __uv-attr-src="assets/icons/googledrive.png">
-						<img id="dropboxupload" class="uploadbutton uploadimage" title="Dropbox Upload" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-iaols-dporbmx%2Cplg" __uv-attr-src="assets/icons/dropbox.png">
-						<img id="onedriveupload" class="uploadbutton uploadimage" title="OneDrive Upload" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-iaols-olefrkvg.rne" __uv-attr-src="assets/icons/onedrive.png">
-					</div>
-				</div>
-				<div class="source">
-					<a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-gktju%60.aoo%2F%40ilBcsjBcncnc%2Fue%60rgtpo" target="_blank" __uv-attr-href="https://github.com/BinBashBanana/webretro">GitHub</a>
-					<a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-gktju%60.aoo%2Fni%60rgtpo" target="_blank" __uv-attr-href="https://github.com/libretro">Libretro</a>
-					<a href="" target="_blank" id="coregithub" __uv-attr-href="">Core Github</a>
-					<a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-eosarkpvel.mre%2F" target="_blank" __uv-attr-href="https://emscripten.org">Emscripten</a>
-					<a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fkndo-" target="_blank" __uv-attr-href="info/">Info</a>
-					<span id="versionindicator" title="New features in this version:
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#333333">
+<title>webretro</title>
+<meta name="description" content="RetroArch in your browser! Libretro cores compiled to WASM using emscripten, plus a custom UI.">
+<meta name="robots" content="nofollow">
+<meta name="og:title" content="webretro">
+<meta name="og:type" content="website">
+<meta name="og:image" content="assets/icons/icon204.png">
+<meta name="og:url" content="https://binbashbanana.github.io/webretro/">
+<link rel="stylesheet" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-bcsg.asq%3Ft%3D4.7" __uv-attr-href="assets/base.css?v=6.5">
+<link rel="stylesheet" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-jqwknfou.asq" __uv-attr-href="assets/jswindow.css">
+<link rel="shortcut icon" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-iaols-iaol224%2Cplg" __uv-attr-href="assets/icons/icon204.png">
+<link rel="apple-touch-icon" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-iaols-iaolm054.rne" __uv-attr-href="assets/icons/iconm256.png">
+<link rel="manifest" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Foalideqt%2Cjqol" __uv-attr-href="manifest.json">
+<link rel="canonical" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F" __uv-attr-href="https://binbashbanana.github.io/webretro/">
+<link rel="dns-prefetch" href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-cfn%2Cjqdglkvp.lev%2F" __uv-attr-href="https://cdn.jsdelivr.net/">
+
+<!-- ======= Embedded custom CSS (replaces inline #canvas style) ======= -->
+<style>
+/* ---------- Reset & variables ---------- */
+:root{
+  --bg: #0f1720;
+  --panel: #0f1720cc;
+  --muted: #98a0b3;
+  --accent: #57a6ff;
+  --accent-2: #7af5b1;
+  --glass: rgba(255,255,255,0.03);
+  --glass-2: rgba(255,255,255,0.02);
+  --surface: #0b1220;
+  --shadow: rgba(0,0,0,0.6);
+  --radius: 12px;
+  --gap: 14px;
+  --menubar-h: 65px;
+  --max-width: 1200px;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Courier New", monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, sans-serif;background:linear-gradient(180deg,#07101a 0%, #08121a 60%, #071014 100%);color:#e6eef8; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+a{color:var(--accent); text-decoration:none}
+img{max-width:100%;display:block}
+
+/* ---------- Layout ---------- */
+.main{max-width:var(--max-width);margin:18px auto;padding:12px;position:relative}
+#menubar{position:fixed;left:0;right:0;top:0;height:var(--menubar-h);display:flex;align-items:center;padding:0 18px;z-index:9999;
+  backdrop-filter: blur(6px); background: linear-gradient(180deg, rgba(10,14,20,0.7), rgba(10,14,20,0.5));
+  border-bottom:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 18px var(--shadow)
+}
+#menubar input[type="checkbox"]{display:none}
+#menubar .menuhiderlabel{display:none}
+
+/* menubar brand/title */
+#webretrotitle{font-weight:700;font-size:20px;margin-left:12px;letter-spacing:0.6px;color:#fff}
+#menubutton, #pause {margin-left:18px;padding:8px 12px;border-radius:10px;background:transparent;border:1px solid transparent;color:var(--muted);cursor:default}
+
+/* main nav (desktop) */
+#menu{list-style:none;display:flex;gap:12px;align-items:center}
+#menu > li{position:relative;padding:8px 10px;border-radius:9px}
+#menu > li:hover{background:rgba(255,255,255,0.02)}
+#menu > li a{color:var(--muted);font-weight:600;font-size:14px}
+#menu > li ul{position:absolute;left:0;top:calc(100% + 8px);min-width:240px;background:linear-gradient(180deg, rgba(12,18,28,0.95), rgba(10,12,18,0.95));border-radius:10px;padding:10px;box-shadow:0 8px 24px rgba(0,0,0,0.6);display:none;z-index:200}
+#menu > li:hover ul{display:block}
+#menu li ul li{display:block;padding:6px 8px;color:var(--muted);font-size:13px;border-radius:8px}
+#menu li ul li:hover{background:rgba(255,255,255,0.02)}
+#menu li .menu-long{font-size:12px;opacity:0.9;color:var(--muted);padding:8px;line-height:1.3}
+
+/* disabled/pointer styles */
+.disabled{opacity:0.45;pointer-events:none}
+.pointer{cursor:pointer}
+
+/* ---------- Controls & buttons ---------- */
+input[type="button"], .uploadbutton, #startbutton{
+  background:linear-gradient(180deg,var(--accent), #2a83da);
+  border: none;color:white;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer;
+  box-shadow: 0 6px 18px rgba(40,120,220,0.18), inset 0 -2px 0 rgba(255,255,255,0.06);
+}
+input[type="button"].specialblue{background:linear-gradient(180deg,#2e9df9, #1b6fc3)}
+input[type="button"]:hover{transform:translateY(-1px)}
+.uploadimage{width:36px;height:36px;object-fit:contain;margin:6px}
+
+/* progress */
+#loadingdiv{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);display:none;text-align:center;padding:20px;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.03)}
+#loadingbar{width:320px;height:10px;border-radius:10px;overflow:hidden;background:#07101a}
+.progress{appearance:none}
+
+/* ---------- Core selection area ---------- */
+#ffd{padding-top:calc(var(--menubar-h) + 28px);max-width:var(--max-width);margin:0 auto}
+#ffdcontent{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
+#coreselectarea{flex:1;min-width:300px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 24px rgba(0,0,0,0.6)}
+#coreselectarea h3{font-size:20px;margin-bottom:10px;color:#fff}
+.coreorderrow{display:flex;align-items:center;gap:8px;margin-bottom:12px;color:var(--muted)}
+#coreorder{padding:6px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+
+/* core list: grid for better readability */
+.corelistul{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.corelistul li{background:var(--glass-2);padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.corelistul li a{display:block;color:#dce9ff;font-weight:600}
+.corelistul li a.greyer{color:var(--muted);font-weight:600}
+#corelist li{transition:transform .12s ease, box-shadow .12s ease}
+#corelist li:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,0.5)}
+
+/* upload area */
+#uploadarea{flex-basis:320px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+#uploadarea h2{font-size:18px;margin-bottom:8px}
+
+/* links & source */
+.source{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+#versionindicator{margin-left:8px;opacity:0.85;font-family:var(--mono);background:rgba(255,255,255,0.02);padding:6px 8px;border-radius:8px}
+
+/* ---------- Canvas & mask ---------- */
+#canvas{display:block;margin:18px auto;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:#000;box-shadow:0 20px 60px rgba(0,0,0,0.7);max-width:100%;height:auto;image-rendering:pixelated}
+#canvasmask{position:fixed;left:0;right:0;top:var(--menubar-h);height:calc(100vh - var(--menubar-h));pointer-events:none}
+#resume{display:flex;align-items:center;justify-content:center;height:100%;pointer-events:auto}
+#resume h1{font-size:44px;margin-bottom:6px;text-align:center}
+#resume h3{font-size:18px;color:var(--muted)}
+
+/* make sure the canvas sits below the menubar */
+#canvas{margin-top:10px}
+
+/* ---------- Modals ---------- */
+#modals{position:fixed;left:0;top:var(--menubar-h);right:0;bottom:0;pointer-events:none}
+#managers{position:relative;pointer-events:auto}
+.modaltop{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+#managerclose{cursor:pointer}
+.managertableparent{width:100%;border-radius:8px;overflow:auto;background:transparent;margin-top:12px}
+.managertable li, .managertable td{padding:8px;border-bottom:1px dashed rgba(255,255,255,0.02);color:var(--muted)}
+.managertableparentshort{max-height:320px}
+
+/* forms, inputs */
+.menuform label{display:block;font-size:14px;color:var(--muted);padding:6px 0}
+.menuform input[type="checkbox"], .menuform input[type="radio"]{margin-right:8px}
+
+/* small helpers */
+.menu-nohover{pointer-events:none}
+.menu-long{font-size:12px;color:var(--muted)}
+.xlmenu{max-width:360px}
+
+/* ---------- Responsive ---------- */
+@media (max-width:900px){
+  #menu{display:none}
+  #menubutton{display:inline-block}
+  #ffdcontent{flex-direction:column}
+  .corelistul{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+  #uploadarea{order:2}
+  #coreselectarea{order:1}
+  #canvas{width:calc(100vw - 32px)}
+}
+
+/* ---------- Accessibility & focus ---------- */
+a:focus, button:focus, input:focus{outline:2px solid rgba(87,166,255,0.25);outline-offset:2px;border-radius:8px}
+
+/* ---------- Tiny tweaks for legacy inline styles in your HTML ---------- */
+/* remove inline style collision for canvas top/height */
+#canvas{top:auto;height:auto !important}
+#canvasmask{height:calc(100vh - var(--menubar-h)) !important;top:var(--menubar-h) !important}
+</style>
+<!-- ===================================================================== -->
+
+</head>
+<body data-theme="webplayer navy" class="coreselect" data-new-gr-c-s-check-loaded="14.1252.0" data-gr-ext-installed="">
+<div class="main" id="mainarea">
+<div id="menubar" style="height: 65px;">
+<input type="checkbox" id="menuhider">
+<label for="menuhider" class="menuhiderlabel"></label>
+<ul id="menu">
+<li class="menuback"><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F" title="Back to core selection" __uv-attr-href="."></a></li>
+<li>Controls
+<ul>
+<li><a id="keybindsbutton" href="" __uv-attr-href="">Keybinds</a></li>
+<li class="menu-long menu-nohover">Please note that these are just the bindings that are set, but in-game controls may vary.</li>
+<li><a href="" title="Opens in new tab" onclick="window.open(window.URL.createObjectURL(new Blob([decodeURIComponent(atob('JTNDIURPQ1RZUEUlMjBodG1sJTNFJTNDaHRtbCUzRSUzQ2hlYWQlM0UlM0NtZXRhJTIwaHR0cC1lcXVpdiUzRCUyMnJlZnJlc2glMjIlMjBjb250ZW50JTNEJTIyMSUzQlVSTCUzRGh0dHBzJTNBJTJGJTJGcmV0cm9waWUub3JnLnVrJTJGZG9jcyUyRlJldHJvQXJjaC1Db25maWd1cmF0aW9uJTJGJTIzZGVmYXVsdC1jb3JlLWNvbnRyb2xzLWZvci1hbGwtZW11bGF0b3JzJTIyJTNFJTNDdGl0bGUlM0VSZWRpcmVjdGluZyUzQyUyRnRpdGxlJTNFJTNDJTJGaGVhZCUzRSUzQ2JvZHklM0UlM0NoMiUzRVJlZGlyZWN0aW5nLi4uJTNDJTJGaDIlM0UlM0MlMkZib2R5JTNFJTNDJTJGaHRtbCUzRQ=='))], {type: 'text/html'})));return false;" __uv-attr-href="" __uv-attr-onclick="window.open(window.URL.createObjectURL(new Blob([decodeURIComponent(atob('JTNDIURPQ1RZUEUlMjBodG1sJTNFJTNDaHRtbCUzRSUzQ2hlYWQlM0UlM0NtZXRhJTIwaHR0cC1lcXVpdiUzRCUyMnJlZnJlc2glMjIlMjBjb250ZW50JTNEJTIyMSUzQlVSTCUzRGh0dHBzJTNBJTJGJTJGcmV0cm9waWUub3JnLnVrJTJGZG9jcyUyRlJldHJvQXJjaC1Db25maWd1cmF0aW9uJTJGJTIzZGVmYXVsdC1jb3JlLWNvbnRyb2xzLWZvci1hbGwtZW11bGF0b3JzJTIyJTNFJTNDdGl0bGUlM0VSZWRpcmVjdGluZyUzQyUyRnRpdGxlJTNFJTNDJTJGaGVhZCUzRSUzQ2JvZHklM0UlM0NoMiUzRVJlZGlyZWN0aW5nLi4uJTNDJTJGaDIlM0UlM0MlMkZib2R5JTNFJTNDJTJGaHRtbCUzRQ=='))], {type: 'text/html'})));return false;">System Specifics</a></li>
+</ul>
+</li>
+<li>Saves
+<ul>
+<li class="pointer disabled" id="savegame">Save Game</li>
+<li class="pointer disabled" id="resetbutton">Reset</li>
+<li class="pointer disabled" id="exportsave">Export SRAM</li>
+<li class="pointer disabled" id="importsave">Import SRAM</li>
+<li class="disabled"><label><input type="checkbox" id="autosave" checked="" disabled="">Autosave (5m)</label></li>
+<li><a id="savesbutton" href="" __uv-attr-href="">Recover Saves</a></li>
+<li class="menu-long menu-nohover" style="width:200px" __uv-attr-style="width: 200px;">Please note that in order for the game to be saved, you must use the save feature in-game (unless of course the game itself autosaves), then press the save button here (Or autosave must happen). <b>These saves are only for in-game save files. If you want to be able to save at any time, use save states.</b> Saves and states are saved in your browser's indexedDB and are automatically readied every time you visit the page. You only need to use export and import for backups.</li>
+</ul>
+</li>
+<li>States
+<ul>
+<li class="pointer disabled" id="savestate">Save State</li>
+<li class="pointer disabled" id="loadstate">Load State</li>
+<li class="pointer disabled" id="undosavestate">Undo Save State</li>
+<li class="pointer disabled" id="undoloadstate">Undo Load State</li>
+<li class="pointer disabled" id="exportstate">Export State</li>
+<li class="pointer disabled" id="importstate">Import State</li>
+<li><a id="statesbutton" href="" __uv-attr-href="">Recover States</a></li>
+<li class="menu-long menu-nohover" style="width:200px" __uv-attr-style="width: 200px;">You must save state before you export state; exported states are not states from the time of exporting.</li>
+</ul>
+</li>
+<li>Screenshots
+<ul>
+<li class="pointer disabled" id="takescreenshot">Take Screenshot</li>
+<li><a id="screenshotsbutton" href="" __uv-attr-href="">Screenshots</a></li>
+</ul>
+</li>
+<li>More
+<ul>
+<li class="disabled" title="May resolve minor scaling issues"><label><input type="checkbox" id="smooth" disabled="">Smooth Scaling</label></li>
+<li class="pointer" id="fullscreenbutton">Fullscreen</li>
+<li class="pointer" id="consolebutton">Console</li>
+<li>Theme
+<ul>
+<li class="menu-nohover">
+<form id="themeselector" class="menuform">
+<label><input type="radio" name="theme" value="iodinelight">Iodine (Light)</label>
+<label><input type="radio" name="theme" value="iodinedark">Iodine (Dark)</label>
+<label><input type="radio" name="theme" value="webplayer">Web Player</label>
+<label><input type="radio" name="theme" value="webplayernavy">Web Player (Navy)</label>
+<label class="disabled"><input type="radio" name="theme" value="emulatorjs" disabled="">EmulatorJS</label>
+</form>
+</li>
+</ul>
+</li>
+<li class="pointer disabled" id="resetbutton2">Reset</li>
+<li class="pointer disabled" id="mousegrabbutton">Mouse Grab</li>
+<li class="pointer disabled" id="gamefocusbutton">Game Focus</li>
+<li>Cheats
+<ul class="xlmenu">
+<li>How to apply a cheat code</li>
+<li>1. Open the Menu</li>
+<li>2. Scroll down</li>
+<li>3. Click "Cheats"</li>
+<li>4. Click "Add new cheat to bottom/top"</li>
+<li>5. Click the new cheat that you just created</li>
+<li>6. Click "Code"</li>
+<li>7. Enter/paste the cheat code</li>
+<li>8. When you are done, press enter</li>
+<li>9. Click "Enabled" (Set to ON)</li>
+<li>10. Go back to Cheats by clicking the bar on the top</li>
+<li>11. Click "Apply Changes"</li>
+<li>12. Exit the menu</li>
+<li class="disabled">(More coming soon)</li>
+</ul>
+</li>
+<li>Shaders
+<ul>
+<li class="disabled">(Coming soon)</li>
+</ul>
+</li>
+<li id="pso">Pre-start Options
+<ul>
+<li class="menu-nohover">
+<form class="menuform" data-core="a5200">
+<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+</form>
+<form class="menuform" data-core="mednafen_psx">
+<label><input type="checkbox" data-opt="highres">High Resolution</label>
+<label><input type="checkbox" data-opt="ditherscaling">Dither Scaling</label>
+<label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
+<label><input type="checkbox" data-opt="antijitter">PGXP Anti-jitter</label>
+</form>
+<form class="menuform" data-core="mednafen_psx_hw">
+<label><input type="checkbox" data-opt="softwarerenderer">Use Software Renderer</label>
+<label><input type="checkbox" data-opt="highres">High Resolution</label>
+<label><input type="checkbox" data-opt="ditherscaling">Dither Scaling</label>
+<label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
+<label><input type="checkbox" data-opt="antijitter">PGXP Anti-jitter</label>
+</form>
+<form class="menuform" data-core="mednafen_vb">
+<label><input type="checkbox" data-opt="anaglyph">Red/Blue Anaglyph</label>
+</form>
+<form class="menuform" data-core="mednafen_wswan">
+<label><input type="checkbox" data-opt="75hz">75hz Mode</label>
+<label><input type="checkbox" data-opt="portrait">Portrait Orientation</label>
+<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+</form>
+<form class="menuform" data-core="melonds">
+<label><input type="checkbox" data-opt="leftright">Left/Right</label>
+</form>
+<form class="menuform" data-core="mgba">
+<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+</form>
+<form class="menuform" data-core="mupen64plus_next">
+<label><input type="checkbox" data-opt="highres">High Resolution</label>
+<label><input type="checkbox" data-opt="widescreen">Widescreen Hack</label>
+</form>
+<form class="menuform" data-core="o2em">
+<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+</form>
+<form class="menuform" data-core="parallel_n64">
+<label><input type="checkbox" data-opt="highres">High Resolution</label>
+<label title="Use gles2n64 instead of Glide64"><input type="checkbox" data-opt="renderer2">Use glN64</label>
+</form>
+<form class="menuform" data-core="prosystem">
+<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+</form>
+<form class="menuform" data-core="snes9x">
+<label><input type="checkbox" data-opt="mouse">SNES Mouse</label>
+</form>
+<form class="menuform" data-core="stella2014">
+<label><input type="checkbox" data-opt="lowpass">Low-pass Filter</label>
+</form>
+<form class="menuform" data-core="vecx">
+<label><input type="checkbox" data-opt="softwarerenderer">Use Software Renderer</label>
+</form>
+<form class="menuform" data-core="virtualjaguar">
+<label><input type="checkbox" data-opt="fastblitter">Fast Blitter</label>
+</form>
+<form class="menuform" data-core="yabause">
+<label><input type="checkbox" data-opt="frameskip">Enable Frameskip</label>
+</form>
+</li>
+</ul>
+</li>
+<li class="pointer" id="downloadstandalonebutton">Download Standalone</li>
+<li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-gktju%60.aoo%2F%40ilBcsjBcncnc%2Fue%60rgtpo" target="_blank" __uv-attr-href="https://github.com/BinBashBanana/webretro">GitHub</a></li>
+</ul>
+</li>
+<li id="menubutton" class="disabled">
+Menu
+</li>
+<li id="pause" class="disabled">
+Pause
+</li>
+</ul>
+</div>
+<h1 id="webretrotitle">webretro</h1>
+<div id="ffd" style="display: block;">
+<div id="ffdcontent">
+<div id="coreselectarea" style="display: block;">
+<h3>Select a Core</h3>
+<div class="coreorderrow">
+<label for="coreorder">Sort by:</label>
+<select id="coreorder">
+<option value="system" selected="">System</option>
+<option value="corename">Core name</option>
+<option value="libraryname">Library name</option>
+</select>
+</div>
+<ul class="corelistul">
+<li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dcuvofeveat" class="greyer" __uv-attr-href="?core=autodetect">AutoDetect (Slower to load)</a></li>
+<span id="corelist"><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dmpgrc" __uv-attr-href="?core=opera">Opera (3DO)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dqtglna0034" __uv-attr-href="?core=stella2014">Stella 2014 (Atari 2600)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dc5002" __uv-attr-href="?core=a5200">a5200 (Atari 5200)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Drrms%7Bsveo" __uv-attr-href="?core=prosystem">ProSystem (Atari 7800)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dtiptwanjcgwap" __uv-attr-href="?core=virtualjaguar">Virtual Jaguar (Atari Jaguar)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Djald%7B" __uv-attr-href="?core=handy">Handy (Atari Lynx)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Deecraoneao" __uv-attr-href="?core=gearcoleco">Gearcoleco (ColecoVision)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Ddrgeahcf" __uv-attr-href="?core=freechaf">FreeChaF (Fairchild Channel F)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dog%60a" __uv-attr-href="?core=mgba">mGBA (GB/GBC/GBA)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Ddrgeknvv" __uv-attr-href="?core=freeintv">FreeIntv (Intellivision)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dlemcf" __uv-attr-href="?core=neocd">NeoCD (Neo-Geo CD)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Doefncfgn%5Dnep" __uv-attr-href="?core=mednafen_ngp">Beetle NeoPop (Neo-Geo Pocket)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dleqtmpka" __uv-attr-href="?core=nestopia">Nestopia UE (NES)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dourel66pnuq_lezt" __uv-attr-href="?core=mupen64plus_next">Mupen64Plus-Next (Nintendo 64)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Drapanlgl%5Dn44" __uv-attr-href="?core=parallel_n64">ParaLLEl N64 (Nintendo 64)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Doenoldq" __uv-attr-href="?core=melonds">melonDS (Nintendo DS)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dm2gm" __uv-attr-href="?core=o2em">O2EM (Odyssey 2)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Doefncfgn%5Dpqx%5Dhu" __uv-attr-href="?core=mednafen_psx_hw">Beetle PSX HW (PlayStation)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3D%7Ba%60awsg" __uv-attr-href="?core=yabause">Yabause (Sega Saturn)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Deeleqiq_rlws%5Dgz" __uv-attr-href="?core=genesis_plus_gx">Genesis Plus GX (Sega Systems)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dqngs%3Bx" __uv-attr-href="?core=snes9x">Snes9x (SNES)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Dteax" __uv-attr-href="?core=vecx">Vecx (Vectrex)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Doefncfgn%5Dv%60" __uv-attr-href="?core=mednafen_vb">Beetle VB (Virtual Boy)</a></li><li><a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2F%3Dcmrg%3Doefncfgn%5Dwqwcn" __uv-attr-href="?core=mednafen_wswan">Beetle WonderSwan (WonderSwan)</a></li></span>
+</ul>
+</div>
+<div id="uploadarea" style="display: none;">
+<h2><span id="systemname"></span> Emulator</h2>
+<input type="button" id="upload" value="Choose ROM File" class="uploadbutton">
+<br>
+<img id="googledriveupload" class="uploadbutton uploadimage" title="Google Drive Upload" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-iaols-gmoelgdpite%2Cplg" __uv-attr-src="assets/icons/googledrive.png">
+<img id="dropboxupload" class="uploadbutton uploadimage" title="Dropbox Upload" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-iaols-dporbmx%2Cplg" __uv-attr-src="assets/icons/dropbox.png">
+<img id="onedriveupload" class="uploadbutton uploadimage" title="OneDrive Upload" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-iaols-olefrkvg.rne" __uv-attr-src="assets/icons/onedrive.png">
+</div>
+</div>
+<div class="source">
+<a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-gktju%60.aoo%2F%40ilBcsjBcncnc%2Fue%60rgtpo" target="_blank" __uv-attr-href="https://github.com/BinBashBanana/webretro">GitHub</a>
+<a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-gktju%60.aoo%2Fni%60rgtpo" target="_blank" __uv-attr-href="https://github.com/libretro">Libretro</a>
+<a href="" target="_blank" id="coregithub" __uv-attr-href="">Core Github</a>
+<a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-eosarkpvel.mre%2F" target="_blank" __uv-attr-href="https://emscripten.org">Emscripten</a>
+<a href="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fkndo-" target="_blank" __uv-attr-href="info/">Info</a>
+<span id="versionindicator" title="New features in this version:
 
 - 19 NEW CORES!!!
 - better core selection
@@ -230,70 +374,69 @@
 - reset, fullscreen buttons
 - standalone html file
 - many more changes (check the github)">v6.5</span>
-				</div>
-			</div>
-			<p id="updatenotice"></p>
-			<input type="button" id="startbutton" value="Start">
-			<div id="loadingdiv">
-				<p class="loadingloading">Loading</p>
-				<p id="loadingtext"></p>
-				<progress id="loadingbar" max="1"></progress>
-			</div>
-			<canvas id="canvas" class="texturePixelated" width="1760" height="1710"></canvas>
-			<div id="canvasmask" style="top: 65px; height: calc(-65px + 100vh);">
-				<div id="resume">
-					<div>
-						<h1>Paused</h1>
-						<h3>Click to resume</h3>
-					</div>
-				</div>
-				<div id="sidealertholder"></div>
-			</div>
-			<div id="modals">
-				<div id="managers">
-					<div class="modaltop">
-						<h2 id="managertitle"></h2>
-						<span id="managerclose">✖</span>
-					</div>
-					<div id="keybindmanager">
-						<h4>Click on the right column to change a key. Press save when you are finished!</h4>
-						<table class="managertableparent managertableparentshort">
-							<tbody class="managertable" id="keybindtable"></tbody>
-						</table>
-						<input type="button" id="savekeybinds" class="specialblue" value="Save">
-						<input type="button" id="resetkeybinds" value="Reset to Default">
-					</div>
-					<div id="screenshotmanager">
-						<div id="screenshotsdiv"></div>
-						<div class="screenshotsbottom">
-							<h4>Screenshots do not persist through page reloads! Download your screenshots now!</h4>
-							<input type="button" id="downloadallscreenshots" value="Download All (zip)">
-						</div>
-					</div>
-					<div id="savemanager">
-						<table class="managertableparent">
-							<tbody class="managertable" id="savetable"></tbody>
-						</table>
-						<h4>Here, you can download all of the webretro saves and states made on <i>this domain</i>.</h4>
-						<div class="savesbottom">
-							<span id="quotatext"></span>
-						</div>
-					</div>
-					<div id="romselector">
-						<table class="managertableparent">
-							<tbody class="managertable" id="romselectortable"></tbody>
-						</table>
-						<h4 id="recommendedextensions"></h4>
-					</div>
-				</div>
-			</div>
-		</div>
-		<script type="text/javascript" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-zkp%2F2%2C4%2C7%2Cmkn%2Cjq" __uv-attr-src="assets/zip-2.4.7.min.js"></script>
-		<script type="text/javascript" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-mf5%2Cmkn%2Cjq" __uv-attr-src="assets/md5.min.js"></script>
-		<script type="text/javascript" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fwawtj%2Fwawtj.hs" __uv-attr-src="uauth/uauth.js"></script>
-		<script type="text/javascript" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-jqwknfou.hs" __uv-attr-src="assets/jswindow.js"></script>
-		<script type="text/javascript" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Frwc.hs" __uv-attr-src="pwa.js"></script>
-		<script type="text/javascript" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-cjapTmCmdgMcp%2Cjq%3Ft%3D4.7" __uv-attr-src="assets/charToCodeMap.js?v=6.5"></script>
-		<script type="text/javascript" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-bcsg.hs%3Dv%3F6%2C5" __uv-attr-src="assets/base.js?v=6.5"></script>
-	
+</div>
+</div>
+<p id="updatenotice"></p>
+<input type="button" id="startbutton" value="Start">
+<div id="loadingdiv">
+<p class="loadingloading">Loading</p>
+<p id="loadingtext"></p>
+<progress id="loadingbar" max="1"></progress>
+</div>
+<canvas id="canvas" class="texturePixelated" width="1760" height="1710"></canvas>
+<div id="canvasmask">
+<div id="resume">
+<div>
+<h1>Paused</h1>
+<h3>Click to resume</h3>
+</div>
+</div>
+<div id="sidealertholder"></div>
+</div>
+<div id="modals">
+<div id="managers">
+<div class="modaltop">
+<h2 id="managertitle"></h2>
+<span id="managerclose">✖</span>
+</div>
+<div id="keybindmanager">
+<h4>Click on the right column to change a key. Press save when you are finished!</h4>
+<table class="managertableparent managertableparentshort">
+<tbody class="managertable" id="keybindtable"></tbody>
+</table>
+<input type="button" id="savekeybinds" class="specialblue" value="Save">
+<input type="button" id="resetkeybinds" value="Reset to Default">
+</div>
+<div id="screenshotmanager">
+<div id="screenshotsdiv"></div>
+<div class="screenshotsbottom">
+<h4>Screenshots do not persist through page reloads! Download your screenshots now!</h4>
+<input type="button" id="downloadallscreenshots" value="Download All (zip)">
+</div>
+</div>
+<div id="savemanager">
+<table class="managertableparent">
+<tbody class="managertable" id="savetable"></tbody>
+</table>
+<h4>Here, you can download all of the webretro saves and states made on <i>this domain</i>.</h4>
+<div class="savesbottom">
+<span id="quotatext"></span>
+</div>
+</div>
+<div id="romselector">
+<table class="managertableparent">
+<tbody class="managertable" id="romselectortable"></tbody>
+</table>
+<h4 id="recommendedextensions"></h4>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-zkp%2F2%2C4%2C7%2Cmkn%2Cjq" __uv-attr-src="assets/zip-2.4.7.min.js"></script>
+<script type="text/javascript" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-mf5%2Cmkn%2Cjq" __uv-attr-src="assets/md5.min.js"></script>
+<script type="text/javascript" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fwawtj%2Fwawtj.hs" __uv-attr-src="uauth/uauth.js"></script>
+<script type="text/javascript" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-jqwknfou.hs" __uv-attr-src="assets/jswindow.js"></script>
+<script type="text/javascript" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Frwc.hs" __uv-attr-src="pwa.js"></script>
+<script type="text/javascript" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-cjapTmCmdgMcp%2Cjq%3Ft%3D4.7" __uv-attr-src="assets/charToCodeMap.js?v=6.5"></script>
+<script type="text/javascript" src="https://firewall2.flamepass.com/@/0c2f1ddc-5748-436f-ae7c-89b5f708d90e/hvtrs8%2F-bkn%60aqh%60alala%2Cgktju%60.ko-wgbpevrm%2Fcsqevs-bcsg.hs%3Dv%3F6%2C5" __uv-attr-src="assets/base.js?v=6.5"></script>
+
 </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
